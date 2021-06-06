@@ -9,15 +9,15 @@ import UIKit
 
 class SetupViewController: UIViewController {
 
-  @IBOutlet private weak var nextButton: UIButton!
   @IBOutlet private weak var scrollView: UIScrollView!
   @IBOutlet private weak var groupSizeTextField: UITextField!
   @IBOutlet private weak var infectionFactorTextField: UITextField!
-  @IBOutlet private weak var timeButton: UIButton! {
-    didSet {
-      timeButton.titleLabel?.adjustsFontSizeToFitWidth = true
-      timeButton.titleLabel?.minimumScaleFactor = 0.3
-    }
+  @IBOutlet private weak var nextButton: UIButton! { didSet { configureButton(button: nextButton) } }
+  @IBOutlet private weak var timeButton: UIButton! { didSet { configureButton(button: timeButton) } }
+  
+  private func configureButton(button: UIButton) {
+    button.titleLabel?.adjustsFontSizeToFitWidth = true
+    button.titleLabel?.minimumScaleFactor = 0.3
   }
   
   private var currentTime: (Int, Int) = (0,1)

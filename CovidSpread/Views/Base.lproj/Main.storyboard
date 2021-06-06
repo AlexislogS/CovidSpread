@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c2Z-Eh-KPn">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,20 +22,20 @@
             <objects>
                 <viewController storyboardIdentifier="ResetPasswordViewController" id="kvo-bz-iUo" customClass="SetupViewController" customModule="CovidSpread" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qe1-hs-d6c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="1X7-EI-Boz">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="477"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTB-xU-ATd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="NEF-aY-ryd">
-                                                <rect key="frame" x="20" y="225" width="374" height="132"/>
+                                                <rect key="frame" x="20" y="119" width="280" height="99"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" placeholder="Количество людей" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-rK-yW1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="28"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>
@@ -44,7 +44,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" placeholder="Фактор заражения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vad-QF-q02">
-                                                        <rect key="frame" x="0.0" y="87.5" width="374" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="71" width="280" height="28"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>
@@ -58,13 +58,15 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-SP-lUf">
-                                                <rect key="frame" x="124" y="621" width="166" height="57"/>
+                                                <rect key="frame" x="80" y="387.5" width="160" height="45.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="LCp-SP-lUf" secondAttribute="height" multiplier="166:57" id="yZS-go-e4K"/>
+                                                    <constraint firstAttribute="width" secondItem="LCp-SP-lUf" secondAttribute="height" multiplier="200:57" id="yZS-go-e4K"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
-                                                <state key="normal" title="Next">
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                                <inset key="titleEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <state key="normal" title="Запустить моделирование">
                                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
@@ -72,29 +74,29 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество людей, которое может быть заражено одним человеком при контакте" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="Swn-9I-ycN">
-                                                <rect key="frame" x="20" y="362" width="374" height="33"/>
+                                                <rect key="frame" x="20" y="223" width="280" height="33"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество людей в моделируемой группе" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="lC2-Vr-wC8">
-                                                <rect key="frame" x="20" y="274.5" width="374" height="16.5"/>
+                                                <rect key="frame" x="20" y="152" width="280" height="33"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-DM-ozw">
-                                                <rect key="frame" x="20" y="10" width="374" height="140"/>
+                                                <rect key="frame" x="20" y="10" width="280" height="92.5"/>
                                                 <string key="text">Данное приложение симулирует и визуализирует распространение инфекции в группе людей.  Последняя информация о коронавирусе на сайте Минздрава.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-UQ-BB1">
-                                                <rect key="frame" x="169" y="489.5" width="76" height="65"/>
+                                                <rect key="frame" x="122" y="283.5" width="76" height="43"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNz-vb-AVe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="43"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                                         <state key="normal" title="0 : 1">
                                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
@@ -108,7 +110,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Период пересчёта количества заражённых людей" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="CSJ-EN-wwi">
-                                                <rect key="frame" x="20" y="564.5" width="374" height="16.5"/>
+                                                <rect key="frame" x="20" y="336.5" width="280" height="11"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -129,7 +131,7 @@
                                             <constraint firstItem="CSJ-EN-wwi" firstAttribute="leading" secondItem="gTB-xU-ATd" secondAttribute="leading" constant="20" id="P3j-NF-FSB"/>
                                             <constraint firstItem="NEF-aY-ryd" firstAttribute="leading" secondItem="gTB-xU-ATd" secondAttribute="leading" constant="20" id="ReZ-nf-nyo"/>
                                             <constraint firstItem="LCp-SP-lUf" firstAttribute="top" secondItem="CSJ-EN-wwi" secondAttribute="bottom" constant="40" id="ShS-e8-Azs"/>
-                                            <constraint firstItem="LCp-SP-lUf" firstAttribute="width" secondItem="gTB-xU-ATd" secondAttribute="width" multiplier="0.4" id="Uqn-ZZ-6ra"/>
+                                            <constraint firstItem="LCp-SP-lUf" firstAttribute="width" secondItem="gTB-xU-ATd" secondAttribute="width" multiplier="0.5" id="Uqn-ZZ-6ra"/>
                                             <constraint firstItem="gSo-DM-ozw" firstAttribute="top" secondItem="gTB-xU-ATd" secondAttribute="top" constant="10" id="Zx4-6k-dYk"/>
                                             <constraint firstItem="CSJ-EN-wwi" firstAttribute="top" secondItem="4Qg-UQ-BB1" secondAttribute="bottom" constant="10" id="aB7-zm-zMV"/>
                                             <constraint firstItem="LCp-SP-lUf" firstAttribute="centerX" secondItem="gTB-xU-ATd" secondAttribute="centerX" id="aUa-0o-pKV"/>
@@ -183,7 +185,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2Z-Eh-KPn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="WVg-Gh-z4Z">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                         <color key="barTintColor" systemColor="systemGrayColor"/>
@@ -208,7 +210,7 @@
             <objects>
                 <collectionViewController id="ufj-GP-akG" customClass="InfectionCollectionViewController" customModule="CovidSpread" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BHM-5g-WUZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="wnP-no-nt3">
@@ -218,12 +220,12 @@
                             <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                         </collectionViewFlowLayout>
                         <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="M2f-yZ-DVa">
-                            <rect key="frame" x="0.0" y="-140" width="414" height="896"/>
+                            <rect key="frame" x="0.0" y="-91" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         </containerView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="person" id="XOh-Dw-JTH" customClass="PersonCollectionViewCell" customModule="CovidSpread" customModuleProvider="target">
-                                <rect key="frame" x="20" y="70" width="145" height="149"/>
+                                <rect key="frame" x="87.5" y="70" width="145" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8sb-id-jul">
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="149"/>
@@ -247,11 +249,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="OqT-SQ-ePK" customClass="InfectionHeader" customModule="CovidSpread" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l3j-6h-bAW">
-                                    <rect key="frame" x="295.5" y="7.5" width="108.5" height="35"/>
+                                    <rect key="frame" x="201.5" y="7.5" width="108.5" height="35"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="gjl-Cb-qpD">
                                             <rect key="frame" x="0.0" y="0.0" width="18" height="35"/>

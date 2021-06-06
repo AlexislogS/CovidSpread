@@ -98,10 +98,11 @@ class InfectionCollectionViewController: UICollectionViewController,
   }
   
   private func infectPersons() {
+    guard infectionFactor > 0 else { return }
     for (index, person) in persons.enumerated() {
       if person.isSick {
-        let quantity = Int.random(in: (0...infectionFactor))
-        for number in 0...quantity {
+        let quantity = Int.random(in: (1...infectionFactor))
+        for number in 1...quantity {
           persons[unsafe: index - number]?.isSick = true
           persons[unsafe: index + number]?.isSick = true
           sickPersons.insert(index - number)
