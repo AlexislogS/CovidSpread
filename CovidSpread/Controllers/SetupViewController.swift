@@ -70,16 +70,6 @@ class SetupViewController: UIViewController {
     return false
   }
   
-  func showAlert(title: String? = nil, message: String? = nil, completion: (() -> Void)? = nil) {
-    let alert = UIAlertController(title: title,
-                                  message: message,
-                                  preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-      completion?()
-    }))
-    present(alert, animated: true)
-  }
-  
   @objc private func handleKeyboard(_ note: Notification) {
     guard let frame = (note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
     guard let curve = UIView.AnimationCurve(rawValue: (note.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int ?? -1) & 3) else { return }

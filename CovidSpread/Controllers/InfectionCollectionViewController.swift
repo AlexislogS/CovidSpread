@@ -94,7 +94,8 @@ class InfectionCollectionViewController: UICollectionViewController,
   }
   
   private func getPersons() -> [Person] {
-    (1...numberOfPersons).map { _ in Person() }
+    guard numberOfPersons >= 0 else { return [] }
+    return (1...numberOfPersons).map { _ in Person() }
   }
   
   private func infectPersons() {
