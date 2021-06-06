@@ -48,8 +48,11 @@ class SetupViewController: UIViewController {
         self?.timeButton.setTitle("\(minutes) : \(seconds)", for: .normal)
       }
     }
-    if let infectionVC = segue.destination as? InfectionCollectionViewController, let numberOfPeople = Int(groupSizeTextField.text ?? "") {
-      infectionVC.numberOfPersons = numberOfPeople
+    if let infectionVC = segue.destination as? InfectionCollectionViewController,
+       let numberOfPersons = Int(groupSizeTextField.text ?? ""),
+       let infectionFactor = Int(infectionFactorTextField.text ?? "") {
+      infectionVC.numberOfPersons = numberOfPersons
+      infectionVC.infectionFactor = infectionFactor
       infectionVC.period = TimeInterval(currentTime.0 * 60 + currentTime.1)
     }
   }
